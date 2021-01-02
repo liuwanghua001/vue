@@ -15,7 +15,7 @@ npm install webpack@3.8.1 -g
 npm install vue-cli -g
 
 # vue init
-vue init webpack 项目名
+vue init webpack objectName
 
 # serve with hot reload at localhost:8080
 npm run dev
@@ -25,4 +25,13 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+```
+
+## GIT
+
+``` bash
+# git config
+it config --global user.name “xuzhangzheng“
+git config --global user.email “xuzhangzheng@ljldata.com”
+ssh-keygen -t rsa -C “xuzhangzheng@ljldata.com”
 ```
