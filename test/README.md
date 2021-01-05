@@ -8,7 +8,11 @@
 # taobao
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 # leng use
-npm config set registry https://registry.npm.taobao.
+npm config set registry https://registry.npm.taobao
+// test config 
+npm config get registry
+// or
+npm info express
 
 # webpack
 npm install webpack@3.8.1 -g
