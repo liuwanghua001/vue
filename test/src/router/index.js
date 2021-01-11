@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Hook from '@/components/Hook'
 import Cycle from '@/components/Cycle'
+import Template from '@/components/Template'
+import Father from '@/components/Father'
+import Son from '@/components/Son'
 
 Vue.use(Router)
 
@@ -30,6 +33,21 @@ export default new Router({
       path: "/cycle",
       name: "Cycle",
       component: Cycle
+    },
+    {
+      path: "/template",
+      name: "Template",
+      component: Template
+    },
+    {
+      path: "/father",
+      name: "Father",
+      component: Father
+    },
+    {
+      path: "/son",
+      name: "Son",
+      component: Son
     }
   ]
 })
