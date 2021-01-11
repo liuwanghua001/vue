@@ -38,8 +38,9 @@
       <a href="">
         <!-- <img src="./img/black.png" alt="" /> -->
         </a>
-    </p>
+    </p>    
   </footer>
+  <router-link :to="{path: 'hook'}">HOOK</router-link>
   </div>
 </template>
 

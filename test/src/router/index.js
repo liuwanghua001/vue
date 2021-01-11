@@ -15,7 +15,15 @@ export default new Router({
     {
       path: "/hook",
       name: "Hook",
-      component: Hook
+      component: Hook,
+     /*
+      beforeEnter: (to, from, next) => {
+        console.log(to)
+        console.log(from)
+        console.log(next)
+        next(true)
+      }
+     */
     }
   ]
 })
