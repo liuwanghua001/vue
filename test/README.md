@@ -1,6 +1,12 @@
 # Vue object
 
 > A Vue.js project
+## plug
+``` hehe
+# plug vscode
+HTML Snippets
+live Server
+``` hehe
 
 ## Build Setup
 
