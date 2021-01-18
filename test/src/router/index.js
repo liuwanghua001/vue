@@ -6,7 +6,9 @@ import Cycle from '@/components/Cycle'
 import Template from '@/components/Template'
 import Father from '@/components/Father'
 import Son from '@/components/Son'
-import Bus from '@/components/Bus'
+
+import About from '@/views/About'
+import Home from '@/views/Home'
 
 Vue.use(Router)
 
@@ -54,6 +56,17 @@ export default new Router({
       path: "/bus",
       name: "bus",
       component: Bus
+    },
+    {
+      path: "/home",
+      name: "Home",
+      component: Home
+    },
+    {
+      path: "/about",
+      name: "About",
+      component: About
+>>>>>>> cb91ebe51de8388a6fc4f8b304e6797cb3f54e9c
     }
   ]
 })
