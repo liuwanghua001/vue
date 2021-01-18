@@ -6,6 +6,7 @@ import Cycle from '@/components/Cycle'
 import Template from '@/components/Template'
 import Father from '@/components/Father'
 import Son from '@/components/Son'
+import Bus from '@/components/Bus'
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ export default new Router({
       path: "/son",
       name: "Son",
       component: Son
+    },
+    {
+      path: "/bus",
+      name: "bus",
+      component: Bus
     }
   ]
 })
