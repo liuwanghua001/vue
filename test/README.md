@@ -47,3 +47,10 @@ it config --global user.name “xuzhangzheng“
 git config --global user.email “xuzhangzheng@ljldata.com”
 ssh-keygen -t rsa -C “xuzhangzheng@ljldata.com”
 ```
+
+## AXIOS
+``` bash
+# request axios
+https://unpkg.com/axios@0.21.1/dist/axios.min.js
+
+```

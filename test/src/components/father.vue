@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Son from './son'
+import Son from './Son'
 export default {
   name: 'father',  
   data () {

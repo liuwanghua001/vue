@@ -51,10 +51,10 @@ export default new Router({
       path: "/son",
       name: "Son",
       component: Son
-    },
+    }, 
     {
       path: "/bus",
-      name: "bus",
+      name: "Bus",
       component: Bus
     },
     {
@@ -66,7 +66,6 @@ export default new Router({
       path: "/about",
       name: "About",
       component: About
->>>>>>> cb91ebe51de8388a6fc4f8b304e6797cb3f54e9c
     }
   ]
 })

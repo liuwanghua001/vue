@@ -11,8 +11,12 @@
   <body>
     <div id="mask">
       <div class="center">
-        <h2 class="title"><img src="./images/logo.png" alt=""> 深圳创维校区环境</h2>
+        <h2 class="title">
+          <!-- <img src="./images/logo.png" alt="">  -->
+          深圳创维环境
+        </h2>
         <img :src="imgList[index]" alt="" />
+
         <a
           href="javascript:void(0)"
           @click="prev"
@@ -21,6 +25,7 @@
         >
           <img src="./images/prev.png" alt="" />
         </a>
+
         <a
           href="javascript:void(0)"
           @click="next"
@@ -54,13 +59,19 @@
           index: 0
         },
         methods: {
+          // 自动切换
+          autoplay() {
+            
+          },
           // 上一张
           prev() {
             this.index--;
+            console.log("上一张：",this.index)
           },
           // 下一张
           next() {
             this.index++;
+            console.log("下一张：",this.index)
           }
         }
       });
