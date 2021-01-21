@@ -15,7 +15,7 @@ export default {
   name: 'App',
   data() {
     return {
-
+      msg: "123gsdfgsdf"
     }
   },
   components: {
