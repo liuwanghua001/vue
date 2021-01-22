@@ -8,7 +8,7 @@ import Father from '@/components/Father'
 import Son from '@/components/Son'
 import Bus from '@/components/Bus'
 
-import About from '@/views/About'
+import About from '@/views/About' 
 import Home from '@/views/Home'
 
 Vue.use(Router)
