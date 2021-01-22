@@ -18,8 +18,7 @@
                 beforeDestroy:
                 destroyed:        
          -->
-        <h2 ref="info">{{ msg }}</h2>
-        
+        <h2 ref="info">{{ msg }}</h2>        
     </div>  
 </template>
 
@@ -38,9 +37,7 @@ export default {
 
   },
   methods: {
-      say() {
-          console.log("say")
-      }
+      
   },
 
 
@@ -91,7 +88,7 @@ export default {
       // console.log("数据修改了吗？----",this.$refs.info)
       // 数据被渲染了，界面也同步数据啦
       // console.log(document.querySelector("h2").innerText);
-  },
+  }
 
   // 
 }
