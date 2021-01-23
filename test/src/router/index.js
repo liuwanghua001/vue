@@ -10,6 +10,7 @@ import Bus from '@/components/Bus'
 import Maps from '@/components/Maps'
 import Render from '@/components/Render'
 import Vant from '@/components/Vant'
+import Request from '@/components/Request'
 
 import About from '@/views/About' 
 import Home from '@/views/Home'
@@ -85,6 +86,11 @@ export default new Router({
       path: "/vant",
       name: "Vant",
       component: Vant
+    },
+    {
+      path: "/request",
+      name: "Request",
+      component: Request
     }
   ]
 })

@@ -30,7 +30,7 @@ export default {
   },
   created() {
     this.$nextTick(() => {
-      console.log(this.$refs.getDoms)
+      // console.log(this.$refs.getDoms)
     })    
   },
   components: {

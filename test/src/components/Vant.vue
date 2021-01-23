@@ -20,6 +20,9 @@ export default {
     showPopup() {
         this.show = true;
     }
+  },
+  mounted(){
+      
   }
 }
 </script>

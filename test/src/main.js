@@ -2,17 +2,23 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.\
 import Vue from 'vue'
 import App from './App'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import router from './router'
 import Vuex from 'vuex'
+import apis from './api/api'
 import { Button, Popup, Cell  } from 'vant'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
 
 Vue.config.productionTip = false
-Vue.use(Vuex)
 
-// Vue.use({Popup,Button,Cell})
-Vue.use(Popup)
-Vue.use(Button)
-Vue.use(Cell)
+let usePlug = [Popup, Button, Cell, Vuex, apis, ElementUI]
+usePlug.forEach(function(item,index) {  
+  Vue.use(item)
+})
+Vue.use(VueAxios,axios)
 
 const store = new Vuex.Store({
   state: {
@@ -20,7 +26,7 @@ const store = new Vuex.Store({
   },
   mutations: {
     increment (state, v) {
-      state.count+=v
+      state.count += v
     }
   }
 })
@@ -30,6 +36,7 @@ const store = new Vuex.Store({
 new Vue({
   el: '#app',
   store,
+  apis,
   router,
   components: { App },
   template: '<App/>'
