@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: 'footer',
+  name: 'foot',
   data () {
       return {
           list: [

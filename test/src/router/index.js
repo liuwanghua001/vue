@@ -8,6 +8,7 @@ import Father from '@/components/Father'
 import Son from '@/components/Son'
 import Bus from '@/components/Bus'
 import Maps from '@/components/Maps'
+import Render from '@/components/Render'
 
 import About from '@/views/About' 
 import Home from '@/views/Home'
@@ -73,6 +74,11 @@ export default new Router({
       path: "/maps",
       name: "Maps",
       component: Maps
+    },
+    {
+      path: "/render",
+      name: "render",
+      component: Render
     }
   ]
 })
