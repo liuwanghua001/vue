@@ -4,6 +4,18 @@
         <h2>map2</h2>
         <button @click="peopleListEach">peopleListEach</button>
         <button @click="cityListEach">cityListEach</button>
+        <ul>
+            <li v-for="item in cityList">
+                <p>省份：{{item.provinceName}}</p>
+                <ul>
+                    <li v-for="items in item.childrenList">
+                        id: {{items.id}}
+                        省会: {{items.name}}
+                        省份: {{items.provinceName}}
+                    </li>                    
+                </ul>
+            </li>
+        </ul>
         <Foot></Foot>
     </div>  
 </template>
@@ -43,6 +55,7 @@ export default {
         })
     },
     //  provinceName转为label，id转为value，name转为label，就需要多层map
+     //   map场景：后端返回对象的键名需要改变（多层嵌套）
     cityListEach: function() {
         this.cityList.map(items => {
             let childrenList = items.childrenList.map(item => {
