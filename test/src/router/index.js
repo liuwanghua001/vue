@@ -7,6 +7,7 @@ import Template from '@/components/Template'
 import Father from '@/components/Father'
 import Son from '@/components/Son'
 import Bus from '@/components/Bus'
+import Maps from '@/components/Maps'
 
 import About from '@/views/About' 
 import Home from '@/views/Home'
@@ -67,6 +68,11 @@ export default new Router({
       path: "/about",
       name: "About",
       component: About
+    },
+    {
+      path: "/maps",
+      name: "Maps",
+      component: Maps
     }
   ]
 })

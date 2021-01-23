@@ -5,7 +5,7 @@
     </div>
 </template>
 <script>
-// import VueEvent from '../VueEvent.js'    
+import VueEvent from '../VueEvent.js'    
 export default {
     name:"about",
     data() {
@@ -15,9 +15,9 @@ export default {
     },
     methods: {
         // 发数据用$emit
-        // emitToHome() {
-        //     VueEvent.$emit("tohome", this.title)
-        // }
+        emitToHome() {
+            VueEvent.$emit("tohome", this.title)
+        }
     }
 }
 </script>
