@@ -9,6 +9,7 @@ import Son from '@/components/Son'
 import Bus from '@/components/Bus'
 import Maps from '@/components/Maps'
 import Render from '@/components/Render'
+import Vant from '@/components/Vant'
 
 import About from '@/views/About' 
 import Home from '@/views/Home'
@@ -79,6 +80,11 @@ export default new Router({
       path: "/render",
       name: "render",
       component: Render
+    },
+    {
+      path: "/vant",
+      name: "Vant",
+      component: Vant
     }
   ]
 })
