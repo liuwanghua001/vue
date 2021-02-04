@@ -13,6 +13,7 @@ live Server
 ``` bash
 # taobao
 npm install -g cnpm --registry=https://registry.npm.taobao.org
+npm uninstall cnpm -g
 # leng use
 npm config set registry https://registry.npm.taobao
 // test config 
