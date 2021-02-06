@@ -43,7 +43,8 @@ export default {
     },
     methods: {
         requestData: function() {
-            this.axios.get('http://wthrcdn.etouch.cn/weather_mini?city='+this.city)
+            let cityTown = "长沙"
+            this.axios.get(`http://wthrcdn.etouch.cn/weather_mini?city=${cityTown}`)
             .then(res => {
                 // console.log(res.data.data)
                 // this.forecast = res.data.data.forecast

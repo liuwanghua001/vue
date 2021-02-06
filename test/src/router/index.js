@@ -11,6 +11,12 @@ import Maps from '@/components/Maps'
 import Render from '@/components/Render'
 import Vant from '@/components/Vant'
 import Request from '@/components/Request'
+import Vuex from '@/components/Vuex'
+import QrCode from '@/components/QrCode'
+import Amap from '@/components/Amap'
+import MapFatherSon from '@/components/MapFatherSon'
+import Tab from '@/components/Tab'
+import TabSon from '@/views/TabSon'
 
 import About from '@/views/About' 
 import Home from '@/views/Home'
@@ -91,6 +97,36 @@ export default new Router({
       path: "/request",
       name: "Request",
       component: Request
+    },
+    {
+      path: "/vuex",
+      name: "Vuex",
+      component: Vuex
+    },
+    {
+      path: "/qrcode",
+      name: "QrCode",
+      component: QrCode
+    },
+    {
+      path: "/amap",
+      name: "Amap",
+      component: Amap
+    },
+    {
+      path: "/mapfatherSon",
+      name: "MapFatherSon",
+      component: MapFatherSon
+    },
+    {
+      path: "/tab",
+      name: "Tab",
+      component: Tab
+    },
+    {
+      path: "/tabson",
+      name: "TabSon",
+      component: TabSon
     }
   ]
 })
