@@ -1,5 +1,6 @@
 <template>
   <div class="map">
+    
     <el-amap class="amap-box" vid="amapDemo" :zoom="zoom" :center="center" 
     :plugin="plugin">
       <!-- 标记点 -->
@@ -60,9 +61,10 @@ export default {
 </script>
 <style scoped>
 .map {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  width: 1200px;
+  height: 400px;
+  margin:100px auto;
+  
   z-index: 100;
 }
 .amap-wrapper {

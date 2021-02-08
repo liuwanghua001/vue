@@ -16,6 +16,8 @@ import QrCode from '@/components/QrCode'
 import Amap from '@/components/Amap'
 import MapFatherSon from '@/components/MapFatherSon'
 import Tab from '@/components/Tab'
+import NavTo from '@/components/NavTo/NavTo'
+import vcharts from '@/components/vcharts'
 import TabSon from '@/views/TabSon'
 
 import About from '@/views/About' 
@@ -127,6 +129,16 @@ export default new Router({
       path: "/tabson",
       name: "TabSon",
       component: TabSon
+    },
+    {
+      path: "/NavTo",
+      name: "NavTo",
+      component: NavTo
+    },
+    {
+      path: "/Vcharts",
+      name: "Vcharts",
+      component: vcharts
     }
   ]
 })

@@ -13,8 +13,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 import store from './store/index'
 import VueQrcodeReader from 'vue-qrcode-reader'
 import VueAMap from 'vue-amap'
-
-
+import echarts from 'echarts'  
+Vue.prototype.$echarts = echarts  
 
 Vue.config.productionTip = false
 
@@ -24,6 +24,8 @@ usePlug.forEach(function(item,index) {
 })
 Vue.use(VueAxios,axios)
 Vue.use(VueAMap)
+
+
 
 VueAMap.initAMapApiLoader({
   key: '8e4658b6641d49f6d3a1ba78e27eb9d2',
@@ -42,6 +44,8 @@ VueAMap.initAMapApiLoader({
   // 默认高德 sdk 版本为 1.4.4
   v: '1.4.4'
 })
+
+
 
 
 
