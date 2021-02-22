@@ -13,6 +13,7 @@ live Server
 ``` bash
 # taobao
 npm install -g cnpm --registry=https://registry.npm.taobao.org
+npm uninstall cnpm -g
 # leng use
 npm config set registry https://registry.npm.taobao
 // test config 
@@ -37,6 +38,16 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+```
+## VUE2.0 Install
+```
+1. install node.js
+2. npm install -g cnpm --registry=https://registry.npm.taobao.org
+3. npm install -g vue-cli
+4. vue init webpack [objectname]
+5. cd [objectname]
+6. npm install 
+7. cnpm run dev
 ```
 
 ## GIT
