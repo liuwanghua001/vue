@@ -3,7 +3,7 @@
 module.exports = {
  
     publicPath: "./",
-    chainWebpack: (config) => {
+    chainWebpack: (config) => {1
         config.resolve.alias
             .set('@', resolve('src'))
             .set('@components', resolve('src/components'))

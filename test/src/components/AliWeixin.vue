@@ -1,8 +1,9 @@
 <template>
     <div class="content">
         <h2 class="title">稍等，正在跳转小程序中。。。。。</h2>
+        
         <wx-open-launch-weapp
-                   id="launch-btn"
+                   id="id"
                    :username="username"
                    :path="path"
                    @launch="handleLaunchFn"
@@ -10,7 +11,7 @@
            > 
            <script type="text/wxtag-template">
                <style>.btn {width:200px;height:40px;border:1px solid red;line-height:40px;display:block;}</style>
-               <button class="btn">h5打开小程序</button>
+               <button class="btn">{{btnText}}</button>
            </script>
         </wx-open-launch-weapp>
     </div>
@@ -28,26 +29,25 @@ export default {
     data () {
         return {
             username: 'gh_6a45f1123c22', // gh_ 开头的原始小程序ID
-            path: 'pages/index/index', // 一定要以 .html 结尾
-            btnText: "xxx体验版",
-            id: '',
+            path: 'pages/index/index.html', // 一定要以 .html 结尾
+            btnText: "微信小程序",
+            id: 'launch-btn',
             appId:'wx7478d1edd78f42ad',
             htmlBag:'',
         }
     },
     mounted() {
 
-
-            console.log("1111111111111111")
-            this.axios.get("/api/othertool/wxjssdk",{
-                params: { 
-                    url: window.location.href.split("#")[0].toString(),
-                    // appid: 'wx7478d1edd78f42ad'
-                }
-            }).then(({data}) => {
-                console.log(data)
-            })
-            console.log("2222222222222222222")
+        // console.log("1111111111111111")
+        // this.axios.get("/api/othertool/wxjssdk",{
+        //     params: { 
+        //         url: window.location.href.split("#")[0].toString(),
+        //         // appid: 'wx7478d1edd78f42ad'
+        //     }
+        // }).then(({data}) => {
+        //     console.log(data)
+        // })
+        // console.log("2222222222222222222")
 
         // 测试请求公众号授权参数
         // this.ToMiniapp();
@@ -57,6 +57,7 @@ export default {
         let platform = this.getPlatform();
         console.log('platform=', platform)
         if (platform === 'wx') {
+            alert("微信")
             // 跳转微信小程序
             // this.ToMiniapp();
  
@@ -69,23 +70,24 @@ export default {
         //         console.log("fail", e.detail);
         //    });
 
-            // location.href = 'https://www.ourvend.com';
+            location.href = 'https://www.ourvend.com';
             // 只能通过微信JSSDK操作
 
             // this.ToMiniapp();
         } else if (platform === 'zfb') {
+            alert("支付宝");
             // 跳转支付宝小程序
             // location.href = 'https://mini.open.alipay.com/channel/miniIndex.htm';
             location.href = 'https://qr.alipay.com/s6x17270qbogsqjgxuykrb8';
         }
     },
     methods: {
-        handleLaunchFn(e) {
-            console.log(e)
-        },
-        handleErrorFn(e) {
-            console.log(e)
-        },
+        // handleLaunchFn(e) {
+        //     console.log(e)
+        // },
+        // handleErrorFn(e) {
+        //     console.log(e)
+        // },
 
         // 支付宝或微信
         getPlatform() {
@@ -104,7 +106,7 @@ export default {
         },
         // 跳转微信小程序
         ToMiniapp() {
-            // uni.request()
+            
             // getWechatJsConfig({
             //     api: 'getLocation',
             //     'url': window.location.href
@@ -116,7 +118,7 @@ export default {
 
             this.axios.get("/api/othertool/wxjssdk",{
                 params: { 
-                    url: window.location.href.split("#")[0].toString(),
+                    url: window.location.href.split("#")[0].toString()
                     // appid: 'wx7478d1edd78f42ad'
                 }
             }).then((data) => { // {data}
