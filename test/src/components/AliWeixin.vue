@@ -55,6 +55,7 @@ export default {
         // alert("开始判断小程序");
 
         let platform = this.getPlatform();
+        console.log("platform:",platform)
         console.log('platform=', platform)
         if (platform === 'wx') {
             alert("微信")
@@ -158,6 +159,7 @@ export default {
                 console.log(err)
             })
         }
+
     }
 }
 </script>
