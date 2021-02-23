@@ -13,5 +13,14 @@ module.exports = {
         externals: {
             'AMap': 'AMap'
         }
+    },    
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://test.ourvend.com',
+                ws: true,
+                changeOrigin: true
+              }
+        }
     }
 }

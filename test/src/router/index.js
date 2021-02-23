@@ -18,8 +18,9 @@ import MapFatherSon from '@/components/MapFatherSon'
 import Tab from '@/components/Tab'
 import NavTo from '@/components/NavTo/NavTo'
 import vcharts from '@/components/vcharts'
-import TabSon from '@/views/TabSon'
+import AliWeixin from '@/components/aliweixin'
 
+import TabSon from '@/views/TabSon'
 import About from '@/views/About' 
 import Home from '@/views/Home'
 
@@ -139,6 +140,11 @@ export default new Router({
       path: "/Vcharts",
       name: "Vcharts",
       component: vcharts
+    },
+    {
+      path: "/AliWeixin",
+      name: "AliWeixin",
+      component: AliWeixin
     }
   ]
 })
