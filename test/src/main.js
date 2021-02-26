@@ -7,18 +7,29 @@ import VueAxios from 'vue-axios'
 import router from './router'
 import Vuex from 'vuex'
 import apis from './api/api'
-import { Button, Popup, Cell  } from 'vant'
+import { Button, Popup, Cell, Dialog  } from 'vant'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import store from './store/index'
 import VueQrcodeReader from 'vue-qrcode-reader'
 import VueAMap from 'vue-amap'
-import echarts from 'echarts'  
+import echarts from 'echarts' 
+// 微信调试工具 
+import VConsole from "vconsole"
+new VConsole()
 Vue.prototype.$echarts = echarts  
 
 Vue.config.productionTip = false
 
-let usePlug = [Popup, Button, Cell, Vuex, apis, ElementUI, VueQrcodeReader]
+Vue.prototype.$axios = axios
+
+// 忽略标签
+Vue.config.ignoredElements = [
+  'wx-open-launch-weapp'
+]
+
+
+let usePlug = [Popup, Button, Cell, Dialog, Vuex, apis, ElementUI, VueQrcodeReader]
 usePlug.forEach(function(item,index) {  
   Vue.use(item)
 })

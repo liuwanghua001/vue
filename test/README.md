@@ -65,3 +65,10 @@ ssh-keygen -t rsa -C “xuzhangzheng@ljldata.com”
 https://unpkg.com/axios@0.21.1/dist/axios.min.js
 
 ```
+
+## KILL PID
+``` bash
+# vue port skill
+taskkill /f /pid 23852
+netstat -ano
+```
