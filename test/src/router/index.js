@@ -19,6 +19,7 @@ import Tab from '@/components/Tab'
 import NavTo from '@/components/NavTo/NavTo'
 import vcharts from '@/components/vcharts'
 import AliWeixin from '@/components/aliweixin'
+import Test from '@/components/Test'
 
 import TabSon from '@/views/TabSon'
 import About from '@/views/About' 
@@ -145,6 +146,11 @@ export default new Router({
       path: "/AliWeixin",
       name: "AliWeixin",
       component: AliWeixin
+    },
+    {
+      path: "/test",
+      name: "Test",
+      component: Test
     }
   ]
 })

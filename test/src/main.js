@@ -7,7 +7,7 @@ import VueAxios from 'vue-axios'
 import router from './router'
 import Vuex from 'vuex'
 import apis from './api/api'
-import { Button, Popup, Cell, Dialog  } from 'vant'
+import { Button, Popup, Cell, Dialog, Toast } from 'vant'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import store from './store/index'
@@ -19,6 +19,7 @@ import VConsole from "vconsole"
 new VConsole()
 Vue.prototype.$echarts = echarts  
 
+
 Vue.config.productionTip = false
 
 Vue.prototype.$axios = axios
@@ -29,12 +30,13 @@ Vue.config.ignoredElements = [
 ]
 
 
-let usePlug = [Popup, Button, Cell, Dialog, Vuex, apis, ElementUI, VueQrcodeReader]
+let usePlug = [Popup, Button, Cell, Dialog, Vuex, apis, ElementUI, VueQrcodeReader, Toast ]
 usePlug.forEach(function(item,index) {  
   Vue.use(item)
 })
 Vue.use(VueAxios,axios)
 Vue.use(VueAMap)
+Vue.use(Toast)
 
 
 
