@@ -35,7 +35,7 @@
 		<!-- <div class="mini-prog" v-html="htmls"></div> -->
         <wx-open-launch-weapp				     
         username="gh_6a45f1123c22"
-        path="pages/index/index.html?testOrder=pingzi"
+        path="pages/index/index.html"
 		@launch="handleLaunchFn"
 		@error="handleErrorFn">		 		
         <script type="text/wxtag-template">
@@ -51,28 +51,6 @@
 			<div class="mini-pro"> 
 				<h4 class="title">云数小店</h4>
 				<p class="message">小程序正在跳转请确认...</p>
-				<div class="enter">确定</div>
-			</div>	
-		</script>		
-        </wx-open-launch-weapp>
-		<wx-open-launch-weapp				     
-        username="gh_6a45f1123c22"
-        path="pages/about/about.html"
-		@launch="handleLaunchFn"
-		@error="handleErrorFn">		 		
-        <script type="text/wxtag-template">
-			<style>					
-				.mini-pro{width:320px;height:170px;position:relative;background:#fff;border-radius:16px;margin:40% auto 0 15px;
-				transform:translateY(76px);border:4px solid #090;margin-bottom:200px;}				
-				.mini-pro .title{color:#0f0f0f;font-weight: 500;line-height: 24px;text-align: center;font-size:16px;}
-				.mini-pro .message{text-align:center;padding-top: 8px;color: #646566;}
-				.mini-pro .enter{color:#090;text-align:center;height:48px;margin-top:27px;}	
-				.content{width:100%;height:100%;background:#090;padding:1px;}				
-			</style>			
-			<!-- <div class="opacity"></div> -->
-			<div class="mini-pro"> 
-				<h4 class="title">云数小店</h4>
-				<p class="message">小程序正在跳转请确认2...</p>
 				<div class="enter">确定</div>
 			</div>	
 		</script>		
@@ -175,6 +153,7 @@
                     }
                 ).then( res => {					
 					let data = res.data
+					console.log("请求结果：",res.data)
                     wx.config({
 						debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 						appId: data.appid, // 必填，企业号的唯一标识，此处填写企业号corpid
