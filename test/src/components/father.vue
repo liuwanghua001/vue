@@ -5,7 +5,7 @@
          -->
         
         <h2 ref="info">函数接收到子组件传过来的值：{{ msg }}</h2>
-        <Son @son="parentFn"></Son>
+        <Son @son="parentFn" :haha="msg"></Son>
         
     </div>  
 </template>
@@ -17,7 +17,7 @@ export default {
   data () {
       return {
           list:['fatherdata','12father'],          
-          msg: ""
+          msg: "msg-father-msg-father"
       }
   },
   watch: {

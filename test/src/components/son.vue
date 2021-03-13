@@ -7,6 +7,7 @@
         <button>按钮</button>
         <h2>--------------------------------</h2>
         <h2>414</h2>
+        <h1>HAHA: {{haha}}</h1>
     </div>  
 </template>
 
@@ -20,7 +21,8 @@ export default {
           ],
           msg: "son"
       }
-  }
+  },
+  props:["haha"]
 }
 </script>
 

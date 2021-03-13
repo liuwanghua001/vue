@@ -36,12 +36,15 @@ export default {
         this.show = true;
     },
     toastLoading: function() {
-        
-      Toast.loading({
-        message: '加载中...',
-        forbidClick: true,
-        loadingType: 'spinner',
-      }); 
+      Toast.allowMultiple();
+      Toast.fail('失败文案');        
+       setTimeout(function(){
+         Toast.loading({
+            message: '加载中...',
+            forbidClick: true,
+            loadingType: 'spinner',
+          }); 
+       },2000)
     },
     toastClick: function() {  
       
