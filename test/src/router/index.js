@@ -20,6 +20,7 @@ import NavTo from '@/components/NavTo/NavTo'
 import vcharts from '@/components/vcharts'
 import AliWeixin from '@/components/aliweixin'
 import Test from '@/components/Test'
+import defineProperty from '@/components/defineProperty'
 
 import TabSon from '@/views/TabSon'
 import About from '@/views/About' 
@@ -61,6 +62,11 @@ export default new Router({
       path: "/father",
       name: "Father",
       component: Father
+    },
+    {
+      path: "/defineProperty",
+      name: "defineProperty",
+      component: defineProperty
     },
     {
       path: "/son",
